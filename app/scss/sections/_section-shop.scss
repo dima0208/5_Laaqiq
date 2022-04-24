@@ -1,0 +1,124 @@
+.section-shop {
+    @extend %bgCover;
+
+    padding: 40px 0;
+
+    @include media('>=desktop') {
+        padding: 99px 0 72px;
+    }
+
+    .container {
+        max-width: 1350px;
+    }
+}
+
+.shops-card-list {
+    max-width: 1164px;
+    width: 100%;
+    margin: 0 auto 84px;
+
+    .df-row {
+        @include media('>=phone') {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+            justify-content: center;
+        }
+
+        .col {
+            @include media('>=phone') {
+                width: 50%;
+                padding: 0 15px;
+            }
+
+            @include media('>=tablet') {
+                width: 33.33%;
+                padding: 0 15px;
+            }
+        }
+    }
+}
+
+.testimonial-slider {
+    position: relative;
+    margin-bottom: 60px;
+    overflow: hidden;
+    
+    @include media('>=desktop') {
+        height: 300px;
+        max-height: 500px;
+    }
+
+    .js-testimonial-slider {
+        max-width: 1170px;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 60px;
+
+        height: 100%;
+
+        .swiper-wrapper {
+            height: 100%;
+        }
+
+        .swiper-pagination {
+            bottom: auto;
+            top: 5%;
+            right: 5px;
+
+            @include media('>=desktop') {
+                top: 10%;
+            }
+        }
+    }
+}
+
+.slider-testimonial-lite {
+    max-width: 200px;
+    width: 100%;
+    position: absolute;
+    left: 40px;
+    top: calc(100% + 5px);
+    
+    @include media('>=tablet') {
+        left: 97px;
+        top: calc(100% + 21px);
+    }
+
+    .js-slider-testimonial-lite {
+        overflow: hidden;
+    }
+
+    .swiper-nav {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-width: 247px;
+        width: 100%;
+
+        .swiper-button {
+            display: block;
+            padding: 8px;
+            width: 12px;
+            height: 12px;
+            font-size: 12px;
+            box-shadow: 0 0 20px -8px rgba($black, 0.75);
+            top: 70%;
+            transform: translateY(-50%);
+
+            &-next {
+                right: -18px;
+
+                @include media('>=tablet') {
+                    right: -22px;
+                }
+            }
+
+            &-prev {
+                left: -56px;
+            }
+        }
+    }
+}

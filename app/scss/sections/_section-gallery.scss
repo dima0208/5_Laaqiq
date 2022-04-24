@@ -1,0 +1,15 @@
+.section-gallery {
+    .df-row {
+        display: flex;
+        flex-wrap: wrap;
+
+        .col {
+            padding: 0;
+            width: 50%;
+
+            @include media('>=phone') {
+                width: 25%;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.section-intro {
+    @extend %bgCover;
+    
+    color: $white;
+    display: flex;
+    padding: 50px 0 81px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 495px;
+    }
+
+    .container {
+        max-width: 918px;
+
+        @include media('>=tablet') {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+    }
+
+    .section-content {
+        width: 100%;
+
+        @include media('<tablet') {
+            text-align: center;
+            margin: 0 auto 40px;
+        }
+
+        @include media('>=tablet') {
+            max-width: 488px;
+        }
+    }
+
+    .section-form {
+        max-width: 297px;
+        width: 100%;
+        margin-right: 30px;
+
+        @include media('<tablet') {
+            margin: 0 auto;
+        }
+    }
+}

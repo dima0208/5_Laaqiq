@@ -1,0 +1,34 @@
+.section-elements {
+    @extend %bgCover;
+
+    color: $white;
+    padding: 40px 0;
+
+    @include media('>=desktop') {
+        padding: 124px 0 80px;
+    }
+
+    .container {
+        position: relative;
+
+        .df-row {
+            @include media('>=phone') {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -15px;
+            }
+
+            .col {
+                @include media('>=phone') {
+                    padding: 0 15px;
+                    width: 50%;
+                    display: flex;
+                }
+
+                @include media('>=tablet') {
+                    width: 25%;
+                }
+            }
+        }
+    }
+}
